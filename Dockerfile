@@ -1,4 +1,4 @@
-FROM datadog/docker-dd-agent:latest-alpine
+FROM datadog/agent
 
 # Add custom configurations if needed
 # COPY conf.d/ /etc/dd-agent/conf.d/
