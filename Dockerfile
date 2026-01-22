@@ -1,4 +1,4 @@
-FROM datadog/agent
+FROM datadog/agent:7-jmx
 
 # Add custom configurations if needed
 # COPY conf.d/ /etc/dd-agent/conf.d/
