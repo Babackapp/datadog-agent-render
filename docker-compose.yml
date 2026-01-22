@@ -1,0 +1,15 @@
+version: '3'
+services:
+  datadog-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DD_API_KEY=${DD_API_KEY}
+      - DD_SITE=US1
+      - DD_ENV=production
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /proc/:/host/proc/:ro
+      - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
+    restart: always
